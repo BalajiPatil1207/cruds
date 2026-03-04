@@ -17,6 +17,15 @@ app.use("/api/studs",studRoute);
 const prodRoute = require("./src/routers/productRoutes");
 app.use("/api/product",prodRoute);
 
+const incomeRoute = require("./src/routers/incomRoutes");
+app.use("/api/income",incomeRoute);
+
+const expenseRoute = require("./src/routers/expenseRoutes");
+app.use("/api/expense",expenseRoute);
+
+const empRoute = require("./src/routers/empRoutes");
+app.use("/api/employee",empRoute);
+
 app.get("/",(req,res)=>{
   res.send("Hello, I Backend")
 })

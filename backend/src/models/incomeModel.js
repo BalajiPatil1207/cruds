@@ -50,7 +50,7 @@ const INCOME_MODEL = sequelize.define(
 
     note: {
       type: DataTypes.TEXT,
-      allowNull: true, // Notes are usually optional
+      allowNull: true, 
     },
   },
   {

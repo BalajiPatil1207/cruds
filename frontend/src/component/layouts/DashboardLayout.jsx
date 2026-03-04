@@ -19,8 +19,9 @@ const DashboardLayout = () => {
           <Link style={linkStyle} to="/users">Users</Link>
           <Link style={linkStyle} to="/studs">Student</Link>
           <Link style={linkStyle} to="/product">Product</Link>
-          <Link style={linkStyle} to="/orders">Income</Link>
-          <Link style={linkStyle} to="/customers">Customers</Link>
+          <Link style={linkStyle} to="/income">Income</Link>
+          <Link style={linkStyle} to="/expense">Expense</Link>
+          <Link style={linkStyle} to="/employee">Employee</Link>
         </div>
       </div>
 
