@@ -26,6 +26,9 @@ app.use("/api/expense",expenseRoute);
 const empRoute = require("./src/routers/empRoutes");
 app.use("/api/employee",empRoute);
 
+const taskRoute = require("./src/routers/taskRoutes");
+app.use("/api/task",taskRoute);
+
 app.get("/",(req,res)=>{
   res.send("Hello, I Backend")
 })

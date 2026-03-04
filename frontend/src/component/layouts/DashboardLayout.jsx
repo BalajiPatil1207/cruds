@@ -22,6 +22,7 @@ const DashboardLayout = () => {
           <Link style={linkStyle} to="/income">Income</Link>
           <Link style={linkStyle} to="/expense">Expense</Link>
           <Link style={linkStyle} to="/employee">Employee</Link>
+          <Link style={linkStyle} to="/task">Tasks</Link>
         </div>
       </div>
 

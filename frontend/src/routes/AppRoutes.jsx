@@ -31,6 +31,10 @@ import ExpenseEdit from "../component/pages/expensePage/ExpenseEdit";
 import EmpIndex from "../component/pages/employee/EmpIndex";
 import EmpCreate from "../component/pages/employee/EmpCreate";
 import EmpEdit from "../component/pages/employee/EmpEdit";
+import TaskIndex from "../component/pages/tasks/TaskIndex";
+import TaskCreate from "../component/pages/tasks/TaskCreate";
+import TaskEdit from "../component/pages/tasks/TaskEdit";
+import TaskShow from "../component/pages/tasks/TaskShow";
 
 const AppRoutes = () => {
   return (
@@ -84,6 +88,14 @@ const AppRoutes = () => {
           <Route index element={<EmpIndex />} />
           <Route path="create" element={<EmpCreate />} />
           <Route path="edit/:id" element={<EmpEdit />} />
+        </Route>
+
+        {/* ================= Tasks ================= */}
+        <Route path="task" element={<StudLayout />}>
+          <Route index element={<TaskIndex />} />
+          <Route path="create" element={<TaskCreate />} />
+          <Route path="edit/:id" element={<TaskEdit />} />
+          <Route path="show/:id" element={<TaskShow />} />
         </Route>
 
 
