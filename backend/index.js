@@ -14,6 +14,9 @@ app.use("/api/user",userRoute);
 const studRoute = require("./src/routers/studRoutes");
 app.use("/api/studs",studRoute);
 
+const prodRoute = require("./src/routers/productRoutes");
+app.use("/api/product",prodRoute);
+
 app.get("/",(req,res)=>{
   res.send("Hello, I Backend")
 })

@@ -43,7 +43,7 @@ const StudIndex = () => {
           </h1>
 
           <Link
-            to="studcreate"
+            to="create"
             className="mt-4 md:mt-0 bg-indigo-600 text-white px-5 py-2 rounded-xl shadow hover:bg-indigo-700 transition duration-300"
           >
             ➕ Add Student
@@ -81,14 +81,14 @@ const StudIndex = () => {
 
                     <td className="py-3 px-4 text-center space-x-2">
                       <Link
-                        to={`studedit/${stud.student_id}`}
+                        to={`edit/${stud.student_id}`}
                         className="bg-yellow-400 text-white px-3 py-1 rounded-lg hover:bg-yellow-500 transition text-sm"
                       >
                         ✏ Edit
                       </Link>
 
                       <Link
-                        to={`studshow/${stud.student_id}`}
+                        to={`show/${stud.student_id}`}
                         className="bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600 transition text-sm"
                       >
                         👁 View
