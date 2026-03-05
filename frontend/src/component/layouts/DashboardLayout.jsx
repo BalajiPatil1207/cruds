@@ -4,7 +4,6 @@ const DashboardLayout = () => {
   return (
     <div style={{ display: "flex", minHeight: "100vh", fontFamily: "Arial" }}>
       
-      {/* Sidebar */}
       <div
         style={{
           width: "250px",
@@ -23,6 +22,7 @@ const DashboardLayout = () => {
           <Link style={linkStyle} to="/expense">Expense</Link>
           <Link style={linkStyle} to="/employee">Employee</Link>
           <Link style={linkStyle} to="/task">Tasks</Link>
+          <Link style={linkStyle} to="/book">Books</Link>
         </div>
       </div>
 
