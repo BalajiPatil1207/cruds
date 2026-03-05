@@ -1,27 +1,28 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import api from "../../../services/api";
+import { toast } from "react-toastify";
 
-const BookCreate = () => {
+const ContactCreate = () => {
 
-  const [book, setBook] = useState({});
+  const [contact, setContact] = useState({});
   const navigate = useNavigate();
 
   const inputHandler = (e) => {
-    setBook({ 
-      ...book, 
-      [e.target.name]: e.target.value 
+    setContact({
+      ...contact,
+      [e.target.name]: e.target.value
     });
   };
 
   const submitHandler = async (e) => {
+
     e.preventDefault();
 
     try {
-      await api.post("/book/store", book);
-      toast.success("Book created");
-      navigate("/book");
+      await api.post("/contact/store", contact);
+      toast.success("Contact created");
+      navigate("/contact");
     } catch (error) {
       toast.error("Creation failed",error);
     }
@@ -33,49 +34,48 @@ const BookCreate = () => {
       <div className="bg-white shadow-xl rounded-xl p-8 w-full max-w-lg">
 
         <h2 className="text-2xl font-bold mb-6 text-center">
-          Create Book
+          Create Contact
         </h2>
 
         <form onSubmit={submitHandler} className="space-y-4">
 
           <input
             type="text"
-            name="title"
-            placeholder="Title"
+            name="name"
+            placeholder="Name"
             className="w-full border p-2 rounded"
             onChange={inputHandler}
-            value={book.title || ''}
+            value={contact.name || ''}
           />
 
           <input
             type="text"
-            name="author"
-            placeholder="Author"
+            name="phone"
+            placeholder="Phone"
             className="w-full border p-2 rounded"
             onChange={inputHandler}
-            value={book.author || ''}
+            value={contact.phone || ''}
           />
 
           <input
-            type="number"
-            name="price"
-            placeholder="Price"
+            type="email"
+            name="email"
+            placeholder="Email"
             className="w-full border p-2 rounded"
             onChange={inputHandler}
-            value={book.price || ''}
+            value={contact.email || ''}
           />
 
-          <input
-            type="number"
-            name="publish_year"
-            placeholder="Publish Year"
+          <textarea
+            name="address"
+            placeholder="Address"
             className="w-full border p-2 rounded"
             onChange={inputHandler}
-            value={book.publish_year || ''}
+            value={contact.address || ''}
           />
 
-          <button className="w-full bg-teal-600 text-white py-2 rounded">
-            Save Book
+          <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded">
+            Save Contact
           </button>
 
         </form>
@@ -86,4 +86,4 @@ const BookCreate = () => {
   );
 };
 
-export default BookCreate;
+export default ContactCreate;

@@ -56,4 +56,6 @@ const BOOK_MODEL = sequelize.define(
   }
 );
 
+BOOK_MODEL.sync();
+
 module.exports = BOOK_MODEL;

@@ -39,6 +39,10 @@ import BookIndex from "../component/pages/books/BookIndex";
 import BookCreate from "../component/pages/books/BookCreate";
 import BooKEdit from "../component/pages/books/BooKEdit";
 import BookShow from "../component/pages/books/BookShow";
+import ContactIndex from "../component/pages/contact/ContactIndex";
+import ContactCreate from "../component/pages/contact/ContactCreate";
+import ContactEdit from "../component/pages/contact/ContactEdit";
+import ContactShow from "../component/pages/contact/ContactShow";
 
 const AppRoutes = () => {
   return (
@@ -108,6 +112,14 @@ const AppRoutes = () => {
           <Route path="create" element={<BookCreate />} />
           <Route path="edit/:id" element={<BooKEdit />} />
           <Route path="show/:id" element={<BookShow />} />
+        </Route>
+
+        {/* ================= CONTACTS ================= */}
+        <Route path="contact" element={<StudLayout />}>
+          <Route index element={<ContactIndex />} />
+          <Route path="create" element={<ContactCreate />} />
+          <Route path="edit/:id" element={<ContactEdit />} />
+          <Route path="show/:id" element={<ContactShow />} />
         </Route>
 
 

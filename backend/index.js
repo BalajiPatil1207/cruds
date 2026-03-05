@@ -32,6 +32,9 @@ app.use("/api/task",taskRoute);
 const bookRoute = require("./src/routers/bookRoutes");
 app.use("/api/book",bookRoute);
 
+const contactRoute = require("./src/routers/contactRoutes");
+app.use("/api/contact",contactRoute);
+
 app.get("/",(req,res)=>{
   res.send("Hello, I Backend")
 });
