@@ -35,6 +35,10 @@ import TaskIndex from "../component/pages/tasks/TaskIndex";
 import TaskCreate from "../component/pages/tasks/TaskCreate";
 import TaskEdit from "../component/pages/tasks/TaskEdit";
 import TaskShow from "../component/pages/tasks/TaskShow";
+import BookIndex from "../component/pages/books/BookIndex";
+import BookCreate from "../component/pages/books/BookCreate";
+import BooKEdit from "../component/pages/books/BooKEdit";
+import BookShow from "../component/pages/books/BookShow";
 
 const AppRoutes = () => {
   return (
@@ -96,6 +100,14 @@ const AppRoutes = () => {
           <Route path="create" element={<TaskCreate />} />
           <Route path="edit/:id" element={<TaskEdit />} />
           <Route path="show/:id" element={<TaskShow />} />
+        </Route>
+
+        {/* ================= BOOKS ================= */}
+        <Route path="book" element={<StudLayout />}>
+          <Route index element={<BookIndex />} />
+          <Route path="create" element={<BookCreate />} />
+          <Route path="edit/:id" element={<BooKEdit />} />
+          <Route path="show/:id" element={<BookShow />} />
         </Route>
 
 
