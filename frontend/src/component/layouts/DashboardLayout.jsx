@@ -24,6 +24,7 @@ const DashboardLayout = () => {
           <Link style={linkStyle} to="/task">Tasks</Link>
           <Link style={linkStyle} to="/book">Books</Link>
           <Link style={linkStyle} to="/contact">Contact</Link>
+          <Link style={linkStyle} to="/category">Category</Link>
         </div>
       </div>
 

@@ -43,6 +43,10 @@ import ContactIndex from "../component/pages/contact/ContactIndex";
 import ContactCreate from "../component/pages/contact/ContactCreate";
 import ContactEdit from "../component/pages/contact/ContactEdit";
 import ContactShow from "../component/pages/contact/ContactShow";
+import CategoryIndex from "../component/pages/category/CategoryIndex";
+import CategoryCreate from "../component/pages/category/CategoryCreate";
+import CategoryEdit from "../component/pages/category/CategoryEdit";
+import CategoryShow from "../component/pages/category/CategoryShow";
 
 const AppRoutes = () => {
   return (
@@ -120,6 +124,14 @@ const AppRoutes = () => {
           <Route path="create" element={<ContactCreate />} />
           <Route path="edit/:id" element={<ContactEdit />} />
           <Route path="show/:id" element={<ContactShow />} />
+        </Route>
+
+        {/* ================= Category ================= */}
+        <Route path="category" element={<StudLayout />}>
+          <Route index element={<CategoryIndex />} />
+          <Route path="create" element={<CategoryCreate />} />
+          <Route path="edit/:id" element={<CategoryEdit />} />
+          <Route path="show/:id" element={<CategoryShow />} />
         </Route>
 
 

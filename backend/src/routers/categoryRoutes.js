@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const bookControl = require("../controllers/bookController");
+const catControl = require("../controllers/categoryController");
 
-router.get("/", bookControl.bookDetails );
-router.get("/find/:id", bookControl.bookFind );
-router.post("/store", bookControl.bookStore );
-router.put("/update/:id", bookControl.bookUpdate );
-router.delete("/delete/:id", bookControl.bookDelete );
+router.get("/", catControl.categoryDetails );
+router.get("/find/:id", catControl.categoryFind );
+router.post("/store", catControl.categoryStore );
+router.put("/update/:id", catControl.categoryUpdate );
+router.delete("/delete/:id", catControl.categoryDelete );
 
 module.exports = router;
