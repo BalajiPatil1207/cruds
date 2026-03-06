@@ -7,9 +7,7 @@ const StudEdit = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const [student, setStudent] = useState({
-    
-  });
+  const [student, setStudent] = useState({});
 
   useEffect(() => {
     const fetchStudent = async () => {
